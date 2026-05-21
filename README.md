@@ -12,11 +12,11 @@ El dataset contiene información sobre transacciones, productos, clientes y paí
 
 ## 🎯 Objetivos del proyecto
 
-- Limpiar datos inconsistentes y ruidosos
-- Identificar problemas de calidad de datos
-- Construir un dataset confiable
-- Construcción de KPIs
-- Visualización de métricas comerciales
+* Limpiar datos inconsistentes y ruidosos
+* Identificar problemas de calidad de datos
+* Construir un dataset confiable
+* Construcción de KPIs
+* Visualización de métricas comerciales
 
 ## 📊 KPIs desarrollados
 
@@ -28,8 +28,8 @@ El dataset contiene información sobre transacciones, productos, clientes y paí
 ## 📈 Resultados obtenidos
 
 * Reino Unido concentra la mayor parte de los ingresos totales
-* Los ingresos se encuentran concentrados en un grupo reducido de clientes
-* Se identificó un fuerte crecimiento de ventas en los últimos meses analizados
+* Se observó que una parte importante de los ingresos proviene de pocos clientes
+* Se detectó un crecimiento importante de las ventas en los últimos meses
 ## 📸 Dashboard
 
 ![Dashboard](screenshots/Dashboard-ecommerce.png)
