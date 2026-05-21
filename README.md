@@ -28,3 +28,6 @@ Proyecto de análisis de datos de un ecommerce utilizando SQL y Power BI.
 * Reino Unido concentra la mayor parte de los ingresos totales
 * Los ingresos se encuentran concentrados en un grupo reducido de clientes
 * Se identificó un fuerte crecimiento de ventas en los últimos meses analizados
+## 📸 Dashboard
+
+![Dashboard](screenshots/Dashboard-ecommerce.png)
