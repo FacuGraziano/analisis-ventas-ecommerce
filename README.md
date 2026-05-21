@@ -1,6 +1,7 @@
 # Análisis de Ventas Ecommerce
 
-Proyecto de análisis de datos de un ecommerce utilizando SQL y Power BI.
+Este proyecto tiene como objetivo analizar un dataset de ventas de un e-commerce, realizando un proceso completo de limpieza de datos (data cleaning) y análisis exploratorio.
+El dataset contiene información sobre transacciones, productos, clientes y países.
 
 ## 🛠 Herramientas utilizadas
 
@@ -11,10 +12,11 @@ Proyecto de análisis de datos de un ecommerce utilizando SQL y Power BI.
 
 ## 🎯 Objetivos del proyecto
 
-* Limpieza y transformación de datos
-* Análisis exploratorio
-* Construcción de KPIs
-* Visualización de métricas comerciales
+- Limpiar datos inconsistentes y ruidosos
+- Identificar problemas de calidad de datos
+- Construir un dataset confiable
+- Construcción de KPIs
+- Visualización de métricas comerciales
 
 ## 📊 KPIs desarrollados
 
