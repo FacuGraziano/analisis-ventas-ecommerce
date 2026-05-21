@@ -3,7 +3,7 @@
 -- =========================================================
 
 -- =========================================================
--- 1. DETECCIÓN DE CustomerID VACÍOS
+-- 1. Deteccion de CustomerID vacios
 -- =========================================================
 -- Se verifica la cantidad total de registros y cuántos
 -- poseen CustomerID válido.
@@ -14,7 +14,7 @@ FROM online_retail;
 
 
 -- =========================================================
--- 2. BÚSQUEDA DE CustomerID VACÍOS ("")
+-- 2. Busqueda de CustomerID vacios ("")
 -- =========================================================
 -- Algunos valores no eran NULL, sino strings vacíos.
 
@@ -24,9 +24,9 @@ WHERE CustomerID = '';
 
 
 -- =========================================================
--- 3. CONVERSIÓN DE VALORES VACÍOS A NULL
+-- 3. Transformacion de campos vacios a null
 -- =========================================================
--- Esto permite tratar correctamente los datos faltantes.
+-- Convertimos strings vacíos a NULL para manejar mejor los datos faltantes
 
 UPDATE online_retail
 SET CustomerID = NULL
@@ -34,7 +34,7 @@ WHERE CustomerID = '';
 
 
 -- =========================================================
--- 4. DETECCIÓN DE DEVOLUCIONES Y CANCELACIONES
+-- 4. Deteccion de devoluciones y cancelaciones
 -- =========================================================
 -- Las facturas que comienzan con "C"
 -- representan cancelaciones o devoluciones.
@@ -45,7 +45,7 @@ WHERE InvoiceNo LIKE 'C%';
 
 
 -- =========================================================
--- 5. DETECCIÓN DE CANTIDADES NEGATIVAS
+-- 5. Deteccion de cantidades negativas
 -- =========================================================
 -- Las cantidades negativas afectan el análisis de ventas.
 
@@ -55,7 +55,7 @@ WHERE Quantity < 0;
 
 
 -- =========================================================
--- 6. CREACIÓN DE DATASET LIMPIO INICIAL
+-- 6. Creacion del dataset limpio inicial
 -- =========================================================
 -- Se eliminan:
 -- - devoluciones
@@ -70,7 +70,7 @@ WHERE Quantity > 0
 
 
 -- =========================================================
--- 7. DETECCIÓN DE DESCRIPCIONES FALTANTES
+-- 7. Deteccion de descripciones vacias
 -- =========================================================
 -- Productos sin descripción no pueden analizarse correctamente.
 
@@ -81,7 +81,7 @@ WHERE Description IS NULL
 
 
 -- =========================================================
--- 8. CREACIÓN DE DATASET FINAL
+-- 8. Creacion del dataset final
 -- =========================================================
 -- Se eliminan registros con:
 -- - descripciones vacías
@@ -95,7 +95,7 @@ WHERE Description IS NOT NULL
 
 
 -- =========================================================
--- 9. DETECCIÓN DE PRECIOS INVÁLIDOS
+-- 9. Deteccion de precios incorrectos
 -- =========================================================
 -- UnitPrice <= 0 no representa ventas reales.
 
@@ -105,7 +105,7 @@ WHERE UnitPrice <= 0;
 
 
 -- =========================================================
--- 10. ELIMINACIÓN DE DATOS NO COMERCIALES
+-- 10. Eliminacios de datos no comerciales
 -- =========================================================
 -- Se excluyen:
 -- - precios en cero
@@ -121,7 +121,7 @@ WHERE UnitPrice > 0
 
 
 -- =========================================================
--- 11. DETECCIÓN DE AJUSTES CONTABLES
+-- 11. Deteccion de ajustes contables
 -- =========================================================
 -- "adjust bad debt" corresponde a ajustes financieros,
 -- no ventas reales.
@@ -132,7 +132,7 @@ WHERE LOWER(Description) LIKE '%debt%';
 
 
 -- =========================================================
--- 12. DATASET FINAL LISTO PARA ANÁLISIS
+-- 12.Tabla final utilizada para las métricas y visualizaciones
 -- =========================================================
 -- Se eliminan ajustes contables y registros no comerciales.
 
